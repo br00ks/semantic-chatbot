@@ -6,6 +6,9 @@
 	position: relative;
 	display: inline-block;
 }
+.inputField {
+	width: 200px;
+}
 
 input[type="text"] {
 	background-color: #f1f1f1;
@@ -43,4 +46,9 @@ input[type="submit"] {
 .dbpedia-autocomplete-active {
 	background-color: DodgerBlue !important;
 	color: #ffffff;
+}
+.ui-menu .ui-menu-item a{
+    color: #96f226;
+    border-radius: 0px;
+    border: 1px solid #454545;
 }
