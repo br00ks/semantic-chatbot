@@ -4,9 +4,14 @@ function activate_autocomplete() {
       minLength: 3,
       source: function(request, response) {
         console.log("term: " + request.term);
+        var inputQuery = request.term.split(" ");
+        console.log(request.term);
+        console.log(inputQuery.pop());
+        var lastString = inputQuery.pop() || request.term;
+        console.log(lastString);
         var query_url =
-          "http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits=5&QueryString=" +
-          request.term;
+          "http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits=10&QueryString=" +
+          lastString;
         console.log("query: " + query_url);
         $.ajax({
           method: "GET",
